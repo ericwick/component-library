@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    flex-direction: row;
+
+    &__body {
+        display: flex;
+        padding: 20px;
+    }
+}
+
+.accordion {
+    background-color: green;
+}
+
+.bento {
+    background-color: red;
+}
