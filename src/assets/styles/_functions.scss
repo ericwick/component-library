@@ -1,0 +1,6 @@
+@import "./colors.scss";
+
+// gets a color value from color map, defined in colors.scss
+@function color($colorName) {
+    @return map-get($colors, $colorName);
+}
