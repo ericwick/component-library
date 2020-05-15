@@ -1,0 +1,31 @@
+@import "./functions.scss";
+@import "./mixins.scss";
+@import "light";
+@import "dark";
+
+$colors: (
+    tronLightBlue: #a1fefe,
+    tronDarkBlue: #004242,
+    white: #ffffff,
+    black: #000000,
+);
+
+$light: (
+    borderDark: color(tronDarkBlue),
+    borderLight: color(tronLightBlue),
+    textDark: color(black),
+    textLight: color(white),
+    backgroundDark: color(tronDarkBlue),
+    backgroundLight: color(tronLightBlue),
+);
+@include generateThemeJSExports(light, $light);
+
+$dark: (
+    borderDark: color(tronLightBlue),
+    borderLight: color(tronDarkBlue),
+    textDark: color(white),
+    textLight: color(black),
+    backgroundDark: color(tronLightBlue),
+    backgroundLight: color(tronDarkBlue),
+);
+@include generateThemeJSExports(dark, $dark);
