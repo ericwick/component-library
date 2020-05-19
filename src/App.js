@@ -1,15 +1,9 @@
 import React from 'react';
-import SideNav from './components/sidenav/sidenav';
-import route from './pages/loadable/routes';
+import Main from './pages/Main';
 
 class App extends React.Component {
   render() {
-    return (
-      <div className="main">
-        <SideNav />
-        {route}
-      </div>
-    );
+    return <Main />;
   }
 }
 

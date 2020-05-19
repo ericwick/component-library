@@ -1,21 +1,21 @@
-import React from "react";
-import "./sidenav.scss";
+import React from 'react';
+import './sidenav.scss';
 
-import { Link } from "react-router-dom";
-import components from "./index";
+import { Link } from 'react-router-dom';
+import components from './index';
 
 function SideNav() {
-    return (
-        <nav className="navbar">
-            {components.map((e, i) => {
-                return (
-                    <Link key={i} className="navbar__link" to={e.link}>
-                        {e.name}
-                    </Link>
-                );
-            })}
-        </nav>
-    );
+  return (
+    <nav className="navbar">
+      {components.map((e, i) => {
+        return (
+          <Link key={i} className="navbar__link" to={e.link} replace>
+            {e.name}
+          </Link>
+        );
+      })}
+    </nav>
+  );
 }
 
 export default SideNav;

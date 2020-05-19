@@ -1,15 +1,15 @@
-import React from "react";
-import route from "./loadable/routes";
-import SideNav from "../components/sidenav/sidenav";
+import React from 'react';
+import './Main.scss';
+import routes from './loadable/routes';
+import SideNav from '../components/sidenav/sidenav';
 
 function Main() {
-    return (
-        <div className="main">
-            <SideNav />
-            <h1>Component-Library</h1>
-            {route}
-        </div>
-    );
+  return (
+    <div className="main-page">
+      <SideNav />
+      <div className="main-page__body">{routes}</div>
+    </div>
+  );
 }
 
 export default Main;

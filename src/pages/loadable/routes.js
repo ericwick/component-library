@@ -5,6 +5,10 @@ import Loading from './loading';
 import Error from './error';
 import Timeout from './timeout';
 
+import Home from '../Home';
+import AccordionDocs from '../AccordionDocs';
+import BentoDocs from '../BentoDocs';
+
 const LoadingComp = (props) => {
   if (props.error) {
     return <Error retry={props.retry} />;
@@ -22,15 +26,15 @@ const page = (path) => {
     loader: () => import(`../${path}`),
     loading: LoadingComp,
     delay: 300,
-    timeout: 10000,
+    timeout: 1000,
   });
 };
 
 export default (
   <Switch>
-    <Route exact path="/" component={page('Main')} />
-    <Route path="/accordion-docs" component={page('AccordionDocs')} />
-    <Route path="/bento-docs" component={page('BentoDocs')} />
+    <Route exact path="/" component={Home} />
+    <Route path="/accordion-docs" component={AccordionDocs} />
+    <Route path="/bento-docs" component={BentoDocs} />
     <Route path="/breadcrumb-docs" component={page('BreadcrumbDocs')} />
     <Route path="/button-docs" component={page('ButtonDocs')} />
     <Route path="/card-docs" component={page('CardDocs')} />
